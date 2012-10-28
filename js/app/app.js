@@ -1,3 +1,3 @@
 var startApp = function() {
-  // alert('started');
+   alert('started');
 };

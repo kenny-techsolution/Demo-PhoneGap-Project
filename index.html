@@ -13,6 +13,9 @@
         .scrollable > * {
             -webkit-transform: translateZ(0px);
         }
+        body {
+            visibility: hidden;
+        }
     </style>
                 <!--
                 <script>
@@ -27,20 +30,11 @@
                         var mobile_system = '';
                     }
                 </script>   -->
-                
-
-                <script type="text/javascript" src="js/libs/cordova/cordova-iphone.js"></script>
-                <script data-main="js/main" src="js/libs/require/require.js"></script>
-                <!-- your scripts here -->
-                
-                <script src="js/app/app.js"></script>
-                <script src="js/app/bootstrap.js"></script>
-                
-                <!--<script src="js/main.js"></script>-->
     </head>
     <body>
         
         <!-- Start of first page -->
+        
         <div data-role="page" id="home" data-position="fixed">
             
             <div data-role="header" data-position="fixed">
@@ -93,5 +87,9 @@
                 <h4>Page Footer</h4>
             </div><!-- /footer -->
         </div><!-- /page -->
+        
+        <script type="text/javascript" src="js/libs/cordova/cordova-iphone.js"></script>
+        <script src="js/app/app.js"></script>
+        <script data-main="js/app/bootstrap.js" src="js/libs/require/require.js"></script>
     </body>
 </html>
