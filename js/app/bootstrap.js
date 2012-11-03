@@ -8,6 +8,7 @@ require.config({
     jqueryMobile: 'libs/jmobile/jquery.mobile',
     underscore: 'libs/underscore/underscore',
     Backbone: 'libs/backbone/backbone',
+    iscroll: 'libs/iscroll/iscroll',
     text: 'libs/require/text',
     domReady:'libs/require/domReady',
     models: 'models',
@@ -32,17 +33,17 @@ require.config({
     },
     jqueryMobile: ['jquery','jqueryMobileConfig']
    }
-   
 });
 
 require(['jquery','main'],function($,main){
   var device_ready = false;
-  
+  $('body').css('visibility','visible');
+  main();
   var initApp = function() {
-    if ((device_ready && jqm_mobile_init) || (jqm_mobile_init && !mobile_system)) {      
-      $('body').css('visibility','visible');
-      main();
-    }
+    //if ((device_ready && jqm_mobile_init) || (jqm_mobile_init && !mobile_system)) {
+      //$('body').css('visibility','visible');
+      //main();
+    //}
   };
 
   var onDeviceReady = function() {

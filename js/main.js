@@ -49,6 +49,30 @@ define([
 
         var restaurants = new restaurantCollection([R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11]);
 
+        $('#menu').live('pageinit', function (event) {
+            $("#restaurant-name").trigger("create");
+            $("#restaurant-name").trigger("refresh");
+        });
+
+        $('#dragger-bottom').on('click',function(){
+                $('div#wrapperparent').animate({
+                    height: '374px'
+                  },0,function(){
+                  $('#dragger-top').fadeIn(500).slideDown();
+                  $('#restaurant-info').slideUp(50);
+                  myScroll.refresh();
+              });
+        });
+        $('#dragger-top').on('click',function(){
+                $('#restaurant-info').slideDown(0,function(){
+                     $('div#wrapperparent').animate({
+                        height: '224px'
+                      },10,function(){
+                        myScroll.refresh();
+                      });
+                      
+                });
+        });
         window.App = new appView({restaurantCollection: restaurants, menu: menu}); 
     }
 });

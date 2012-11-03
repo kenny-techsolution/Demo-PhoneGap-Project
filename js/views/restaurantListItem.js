@@ -1,10 +1,12 @@
+var myScroll;
 define([
     'jquery',
     'underscore',
 	'Backbone',
     'views/menuListItem',
 	'text!templates/restaurantRow.html',
-    'jqueryMobile'
+    'jqueryMobile',
+    'iscroll'
 	],function($,_,Backbone,dishView,restaurantRowTemplate){
     var restaurantListItemView = Backbone.View.extend({
         tagName: "li",
@@ -37,6 +39,24 @@ define([
                 $("#menu-container").trigger("create");
             });
             $.mobile.changePage("#menu", {transition: "slide",reverse: false,changeHash: false});
+            //setTimeout(function(){myScroll.refresh()},100);
+            function loaded(){
+            console.log("iscroll");
+            console.log(iScroll);
+                  myScroll= new iScroll('wrapper',{
+                  //snap: 'li',     // Would snap logically
+                  // Snaps to each "P" tag
+                  momentum: true,
+                  hScrollbar: false,
+                  vScrollbar: true,
+                  hideScrollbar:false
+                });
+                console.log(myScroll);
+            }
+            loaded();
+            document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+            
+            //document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
         }
     });
     

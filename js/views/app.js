@@ -3,7 +3,8 @@ define([
 	'underscore',
 	'Backbone',
     'views/restaurantListItem',
-    'jqueryMobile'
+    'jqueryMobile',
+    'iscroll'
 	],function($,_,Backbone,restaurantView){
     var AppView = Backbone.View.extend({
         el: $("#home"),
@@ -28,6 +29,7 @@ define([
             if (this.listCreated == false) {
                 var markup;
                 var menu = this.options.menu;
+
                 _.each(this.options.restaurantCollection.models, function (r) {
                     var rv = new restaurantView({
                         model: r,

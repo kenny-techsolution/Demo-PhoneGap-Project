@@ -1,3 +1,132 @@
+.scrollable > *
 {
-    
+  -webkit-transform:translateZ(0px);
+}
+
+body
+{
+  visibility:hidden;
+}
+
+#restaurant-name
+{
+  background-color:#999;
+  background-image:none;
+  font-size:10px;
+}
+
+#container
+{
+  background-color:blue;
+  top:0;
+  bottom:0;
+  height:374px;
+  left:0;
+  width:100%;
+  position:relative;
+  padding:0!important;
+}
+
+div#wrapperparent
+{
+  position:relative;
+  background-color:#FFC0CB;
+  width:100%;
+  height:224px;
+  top:0;
+  bottom:0;
+}
+
+#restaurant-info
+{
+  background-color:red;
+  height:150px;
+  width:100%;
+  position:relative;
+  text-align:center;
+  z-index:10000;
+}
+
+#dragger-bottom
+{
+  background-color:#000;
+  width:30px;
+  height:30px;
+  bottom:0;
+  margin-bottom:0;
+  left:50%;
+  margin-left:auto;
+  margin-right:auto;
+  position:absolute;
+}
+
+#dragger-top
+{
+  z-index:1000;
+  background-color:#000;
+  width:30px;
+  height:30px;
+  top:0;
+  bottom:0;
+  margin-bottom:0;
+  left:50%;
+  margin-left:auto;
+  margin-right:auto;
+  position:absolute;
+  display:none;
+}
+
+#wrapper
+{
+  position:absolute;
+  z-index:1;
+  top:0;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#AAA;
+  overflow:auto;
+}
+
+#scroller
+{
+  position:absolute;
+  z-index:1;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  width:100%;
+  padding:0;
+}
+
+#scroller ul
+{
+  list-style:none;
+  width:100%;
+  text-align:left;
+  margin:0;
+  padding:0;
+}
+
+#scroller li
+{
+  height:40px;
+  line-height:40px;
+  border-bottom:1px solid #CCC;
+  border-top:1px solid #FFF;
+  background-color:#FAFAFA;
+  font-size:14px;
+  padding:0 10px;
+}
+
+#scroller li .dishName
+{
+  height:20px;
+  width:200px;
+  float:left;
+}
+
+#scroller li .price
+{
+  height:20px;
+  width:30px;
+  float:left;
 }

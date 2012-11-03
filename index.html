@@ -8,15 +8,8 @@
                 
                 <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
                 <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
-                    <!-- Fix for scrolling on iOS prior to iOS 6 -->
-    <style type="text/css">
-        .scrollable > * {
-            -webkit-transform: translateZ(0px);
-        }
-        body {
-            visibility: hidden;
-        }
-    </style>
+                <link rel="stylesheet" href="css/main.css" />
+                <!-- Fix for scrolling on iOS prior to iOS 6 -->
                 <!--
                 <script>
                     var userAgent = navigator.userAgent + '';
@@ -58,7 +51,7 @@
         
         <!-- Start of second page -->
         <div data-role="page" id="result">
-            <div data-role="header" data-position="fixed">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
                 <a href="#foo" id="back-to-home" data-role="button" data-inline="true">Back</a><h1>Bar</h1>
             </div><!-- /header -->
             
@@ -67,23 +60,33 @@
                 </ul>
             </div><!-- /content -->
             
-            <div data-role="footer" data-position="fixed">
+            <div data-role="footer" data-position="fixed" data-tap-toggle="false">
                 <h4>Page Footer</h4>
             </div><!-- /footer -->
         </div><!-- /page -->
         
         <!-- Start of third page -->
         <div data-role="page" id="menu">
-            <div data-role="header" data-position="fixed">
-                <a href="#bar" id="back-to-result" data-role="button" data-inline="true">Back</a><h1>Bar</h1>
+            <div id="restaurant-name" data-role="header" data-position="fixed" data-tap-toggle="false">
+                <a href="#bar" id="back-to-result" data-role="button" data-inline="true">Back</a><h1>Buchon French Restaurant</h1>
             </div><!-- /header -->
-            
-            <div data-role="content" >
-                <ul data-role="listview" data-theme="d" id="menu-container">
-                </ul>
-            </div><!-- /content -->
-            
-            <div data-role="footer" data-position="fixed">
+
+            <div data-role="content" id="container">
+                <div id="dragger-top"></div>
+                <div id="restaurant-info">
+                    <div id="dragger-bottom"></div>
+                </div>
+                <div id="wrapperparent">
+                    <div id="wrapper">
+                        <div id="scroller">
+                            <ul data-role="listview" data-theme="d" id="menu-container">
+                            </ul>
+                        </div>
+                    </div><!-- /content -->
+                </div>
+            </div>
+
+            <div id="menufooter" data-role="footer" data-position="fixed" data-tap-toggle="false">
                 <h4>Page Footer</h4>
             </div><!-- /footer -->
         </div><!-- /page -->
