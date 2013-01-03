@@ -1,0 +1,17 @@
+<% _.each(results, function(result) { %>
+<li data-name="<%= result.name %>">
+  	<div>
+  		<div class="column0">
+  			<img src=" <%= result.img %>" alt="some_text">
+  		</div>
+  		<div class="column1"><div class="name"><%= result.name %></div></div>
+  		<div class="column2">
+  			<div class="distance"><%= result.distance %></div>
+  			<div class="rating"><%= result.rating %></div>
+  		</div>
+  		<div class="column3">
+  			<div class="price">$<%= result.price %></div>
+  		</div>          		
+  	</div>
+</li>
+<% }); %>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Castro Project</title>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />  -->  
+    <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	
+	<div class="b-sidebar">
+		<div class="b-main-menu">
+			<ul>
+				<li class="b-profile-brief">
+					<div class="image"></div>
+					<div class="name">Kenny Chung</div>
+				</li>
+				<li><a href="#contact" data-transition="slidefade">Account Setting</a></li>
+				<li><a href="#">Bookmarks</a></li>
+				<li><a href="#">Pending Order</a></li>
+				<li><a href="#">Completed Order</a></li>
+				<li><a href="#">Reviews</a></li>			
+			</ul>
+		</div>
+		<div class="b-discover">
+			<ul>
+				<li class="title">Discover</li>
+				<li><a href="#">Indian Cuisin</a></li>
+			</uL>
+		</div>
+	</div>
+	<div class="b-top-container">
+		<div class="b-header-control">
+			<div class="left">
+				<a href="#" class="icon sidebar-link"></a>
+			</div>
+			<div class = "right">
+				<a href="#search-page" class="icon search" data-transition="none"></a>
+				<a href="#" class="icon incomplete-order"></a>
+				<a href="#" class="icon favorite-place"></a>
+			</div>	
+		</div>
+		<div data-role="page" class="slidables pages" id="home">
+			<div data-role="header" class="b-native-header">
+			</div>
+			<div data-role="content">
+				<p><strong>Note: You can swipe right/left to show/close menu.</strong></p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			</div>
+		</div>
+		
+		<div data-role="page" class="pages" id="search-page">
+			<div data-role="content" class="content">
+				<a href="#home" class="icon cancel" data-transition="none">cancel</a>
+			</div>
+		</div>
+	</div>
+	<div class="b-popover incomplete-order">
+		<div class="arrow"></div>
+		<div class="body"><div>
+	</div>
+	<div class="b-popover favorite-place">
+		<div class="arrow"></div>
+		<div class="body"><div>
+	</div>
+    <script type="text/javascript" src="js/libs/cordova/cordova-iphone.js"></script>
+    <script src="js/app/app.js"></script>
+    <script data-main="js/app/bootstrap.js" src="js/libs/require/require.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>phonegap & jquery mobile boilerplate</title>
+                
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+                
+                <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+                <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
+                <link rel="stylesheet" href="css/main.css" />
+                <!-- Fix for scrolling on iOS prior to iOS 6 -->
+                <!--
+                <script>
+                    var userAgent = navigator.userAgent + '';
+                    if (userAgent.indexOf('iPhone') > -1) {
+                        document.write('<script src="js/libs/cordova/cordova-iphone.js"></sc' + 'ript>');
+                        var mobile_system = 'iphone';
+                    } else if (userAgent.indexOf('Android') > -1) {
+                        document.write('<script src="js/lib/cordova/cordova-android.js"></sc' + 'ript>');
+                        var mobile_system = 'android';
+                    } else {
+                        var mobile_system = '';
+                    }
+                </script>   -->
+    </head>
+    <body>
+        
+        <!-- Start of the new construction -->
+        <div id="main-frame">
+                 <div data-role="page" id="sidebar-menu">
+                        <div data-role="content">
+                            <ul data-role="listview" data-theme="e">
+                                <li>test 1</li>
+                                <li>test 2</li>
+                                <li>test 3</li>
+                                <li>test 1</li>
+                                <li>test 2</li>
+                                <li>test 3</li>
+                            </ul>
+                        </div>
+                </div>
+                <div data-role= "page" id="main-area">
+                    <div>testtest</div>
+<div data-role="content">
+
+                    <div id="wrapperparent">
+                        <div class="shadow-block"></div>
+                        <div id="wrapper">
+                            <div id="scroller">
+                                <div class="menu-category" data-role="collapsible" data-inset="false" data-collapsed="true" >
+                                    <h3 data-icon="false">Appertizer<div class="menu-counts-button"><span>5</span>Dishes</div></h3>
+                                    <div>
+                                        <ul data-role="listview">
+                                            <li class="shadow">Hummus</li>
+                                            <li>Pinto Dish</li>
+                                            <li>Salad</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="menu-category" data-role="collapsible" data-inset="false" data-collapsed="true" data-icon="false">
+                                    <h3>Numeric Section<div class="menu-counts-button"><span>5</span>Dishes</div></h3>
+                                    <div>
+                                        <ul data-role="listview">
+                                            <li class="shadow">1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="menu-category" data-role="collapsible" data-inset="false" data-collapsed="true" >
+                                    <h3 data-icon="false">Appertizer<div class="menu-counts-button"><span>5</span>Dishes</div></h3>
+                                    <div>
+                                        <ul data-role="listview">
+                                            <li class="shadow">Hummus</li>
+                                            <li>Pinto Dish</li>
+                                            <li>Salad</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="menu-category" data-role="collapsible" data-inset="false" data-collapsed="true" data-icon="false">
+                                    <h3>Numeric Section<div class="menu-counts-button"><span>5</span>Dishes</div></h3>
+                                    <div>
+                                        <ul data-role="listview">
+                                            <li class="shadow">1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /content -->
+
+               </div>
+                
+            </div>
+        </div>
+        <!--end of the new construction-->
+        <div data-role="page" id="home" data-position="fixed">
+            
+            <div data-role="header" data-position="fixed">
+                <h1 id="foo">Foo</h1>
+            </div><!-- /header -->
+            
+            <div data-role="content" id="main-content">
+                <div data-role="content" id="search">
+                    <input type="search" name="search" id="search-basic" value="" />
+                </div>
+                <button id="search-button">Button element</button>
+                <p>I'm first in the source order so I'm shown as the page.</p>
+                <p>View internal page called <a href="#bar">bar</a></p>
+            </div><!-- /content -->
+            
+            <div data-role="footer" data-position="fixed">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+        
+        
+        <!-- Start of second page -->
+        <div data-role="page" id="result">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <a href="#foo" id="back-to-home" data-role="button" data-inline="true">Back</a><h1>Bar</h1>
+            </div><!-- /header -->
+            
+            <div data-role="content" >
+                <ul data-role="listview" data-theme="d" id="list-container">
+                </ul>
+            </div><!-- /content -->
+            
+            <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+        
+        <!-- Start of third page -->
+        <div data-role="page" id="menu">
+            <div id="restaurant-name" data-role="header" data-position="fixed" data-tap-toggle="false">
+                <a href="#bar" id="back-to-result" data-role="button" data-inline="true">Back</a><h1>Buchon French Restaurant</h1>
+                <a href="#" id="setting-link"></a>
+            </div>
+            <!--
+            <div id="setting-menu">
+                    <ul data-role="listview" data-theme="d" id="setting-menu-container">
+                        <li>test 1</li>
+                        <li>test 2</li>
+                        <li>test 3</li>
+                    </ul>                    
+                </div>
+            
+            <div data-role="content" id="container">
+                <div id="dragger-top"></div>
+                <div id="restaurant-info">
+                    <div id="dragger-bottom"></div>
+                </div>
+                <div id="wrapperparent">
+                    <div id="wrapper">
+                        <div id="scroller">
+                            <ul data-role="listview" data-theme="d" id="menu-container">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+
+            <div id="menufooter" data-role="footer" data-position="fixed" data-tap-toggle="false">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+        
+        <!-- +++++++++++++++++++++++++ RESTAURANT PAGE +++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div data-role="page" id="restaurant">
+            <div id="restaurant-name1" data-role="header" data-position="fixed" data-tap-toggle="false">
+                <a href="#bar" id="back-to-result1" data-role="button" data-inline="true">Back</a>
+                RESTAURANT
+                <div href="#" id="setting-link1">setting</div>
+            </div><!-- /header -->
+            <div id="setting-menu">
+                    <ul data-role="listview" data-theme="d" id="setting-menu-container">
+                        <li>test 1</li>
+                        <li>test 2</li>
+                        <li>test 3</li>
+                    </ul>                    
+                </div>
+            <div data-role="content" id="container">
+                <div id="dish-detail">
+                    <div>Shrimp Pasta</div>
+                    <div> <img src="http://food.sndimg.com/img/recipes/19/03/72/large/pictnT9r8.jpg" height:"200" width="100%"></div>
+                    <div>
+                    </div>
+                </div>
+                <div id="dragger-top"></div>
+                    <div id="restaurant-info">
+                    <div id="dragger-bottom"></div>
+                </div>
+
+                <div id="wrapperparent">
+                    <div class="shadow-block"></div>
+                    <div id="wrapper">
+                        <div id="scroller">
+                            <div class="menu-category" data-role="collapsible" data-inset="false" data-collapsed="true" >
+                                <h3 data-icon="false">Appertizer<div class="menu-counts-button"><span>5</span>Dishes</div></h3>
+                                <div>
+                                    <ul data-role="listview">
+                                        <li class="shadow">Hummus</li>
+                                        <li>Pinto Dish</li>
+                                        <li>Salad</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="menu-category" data-role="collapsible" data-inset="false" data-collapsed="true" data-icon="false">
+                                <h3>Numeric Section<div class="menu-counts-button"><span>5</span>Dishes</div></h3>
+                                <div>
+                                    <ul data-role="listview">
+                                        <li class="shadow">1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="menu-category" data-role="collapsible" data-inset="false" data-collapsed="true" >
+                                <h3 data-icon="false">Appertizer<div class="menu-counts-button"><span>5</span>Dishes</div></h3>
+                                <div>
+                                    <ul data-role="listview">
+                                        <li class="shadow">Hummus</li>
+                                        <li>Pinto Dish</li>
+                                        <li>Salad</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="menu-category" data-role="collapsible" data-inset="false" data-collapsed="true" data-icon="false">
+                                <h3>Numeric Section<div class="menu-counts-button"><span>5</span>Dishes</div></h3>
+                                <div>
+                                    <ul data-role="listview">
+                                        <li class="shadow">1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /content -->
+                </div>
+                <!-- scroll end-->
+            </div>
+            
+            <div id="menu-footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
+                <div id="your-order">Your order</div><div id="amount">$50</div>
+            </div><!-- /footer -->
+        </div>
+        <!-- +++++++++++++++++++++++++ RESTAURANT PAGE +++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <script type="text/javascript" src="js/libs/cordova/cordova-iphone.js"></script>
+        <script src="js/app/app.js"></script>
+        <script data-main="js/app/bootstrap.js" src="js/libs/require/require.js"></script>
+    </body>
+</html>

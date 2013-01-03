@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>phonegap & jquery mobile boilerplate</title>
+                
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+                
+                <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+                <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
+                <link rel="stylesheet" href="css/main.css" />
+                <!-- Fix for scrolling on iOS prior to iOS 6 -->
+                <!--
+                <script>
+                    var userAgent = navigator.userAgent + '';
+                    if (userAgent.indexOf('iPhone') > -1) {
+                        document.write('<script src="js/libs/cordova/cordova-iphone.js"></sc' + 'ript>');
+                        var mobile_system = 'iphone';
+                    } else if (userAgent.indexOf('Android') > -1) {
+                        document.write('<script src="js/lib/cordova/cordova-android.js"></sc' + 'ript>');
+                        var mobile_system = 'android';
+                    } else {
+                        var mobile_system = '';
+                    }
+                </script>   -->
+    </head>
+    <body>
+        <!--
+		<div id="menu">
+			<h3>Menu</h3>
+			<ul>
+				<li class="active"><a href="#home" class="contentLink">Home </a></li>
+				<li><a href="#home" class="contentLink">About </a></li>
+				<li><a href="#home" class="contentLink">Portfolio </a></li>
+				<li><a href="#home" class="contentLink">Contact </a></li>
+			</ul>
+		</div>
+		-->
+		<div data-role="page" class="pages" id="home">
+			<div data-role="header">
+			<a href="#"class="showMenu">Menu</a>
+			<a href="#page-two" class="contactlink">Contact</a>
+				<h1>FB Style Menu</h1>
+			</div><!-- /header -->
+			<div data-role="content">
+				<p><strong>Note: You can swipe right/left to show/close menu.</strong></p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			</div><!-- /content -->
+		</div><!-- /page -->
+		<div data-role="page" class="pages" id="page-two">
+			<div data-role="header">
+			<a href="#"class="showMenu">Contact</a>
+				<h1>hahahahahahah</h1>
+			</div><!-- /header -->
+			<div data-role="content">
+				<p><strong>you got here</strong></p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			</div><!-- /content -->
+		</div><!-- /page -->
+        <script type="text/javascript" src="js/libs/cordova/cordova-iphone.js"></script>
+        <script src="js/app/app.js"></script>
+        <script data-main="js/app/bootstrap.js" src="js/libs/require/require.js"></script>
+    </body>
+</html>

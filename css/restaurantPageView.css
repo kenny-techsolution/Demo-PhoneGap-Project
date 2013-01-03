@@ -1,0 +1,41 @@
+/*RESTAURANT PAGE*/
+#restaurant-page .b-restaurant-summary{
+    margin-top: 42px;
+    height: 100%;
+    width: 100%;
+}
+#restaurant-page .b-restaurant-summary .b-control-bar{
+    height: 40px;
+    width: 100%;
+    background-color: #000000;
+}
+#restaurant-page .info{
+    background-color: #999999;
+    display: block;
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    font-size: 25px;    
+}
+#restaurant-page .menus {
+    width: 100%;
+}
+#restaurant-page .title {
+    color: #FFFFFF;
+    width: 100%;
+    display: block;
+    height: 20px;
+    padding: 10px;
+    background-color:#3E3E3E;
+    border-bottom: 1px solid #777777;
+}
+#restaurant-page .section li{
+    height: 20px;
+}
+#restaurant-page .name{
+    float:left;
+    width: 250px;
+}
+#restaurant-page .price{
+    float:left;
+}
