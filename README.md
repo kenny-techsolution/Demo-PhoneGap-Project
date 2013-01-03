@@ -3,6 +3,9 @@
 
 The www root of the PhoneGap project.
 
+##Version 0.01
+This iteration includes basic structure for non-restaurant user. It provides functionality for searching restaurant given keyword and address. The app will return the result and allow user to view it as a list or as a map. User can further explore the restaurant menu with the flow according to our UI design. 
+
 ##Completed:
 <ul>
   <li>basic file structure setup</li>
