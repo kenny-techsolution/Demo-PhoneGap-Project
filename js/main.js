@@ -1,78 +1,107 @@
+/**
+* This module does two things:
+* 1. setup basic app frame interaction.
+* 2. create all collections and models needed for the entire app.
+* (c) 2012 Kenny Chung
+*/
 define([
     'jquery',
 	'underscore',
 	'Backbone',
-    'models/dish',
-    'collections/dish',
+    'models/search',
+    'models/autocomplete',
     'models/restaurant',
     'collections/restaurant',
-    'views/app',
-    'jqueryMobile'
-    ],function($,_,Backbone,dish,dishCollection,restaurant,restaurantCollection,appView){
+    'models/restaurantPage',
+    'routers/app',
+    'jqueryMobile',
+    'pep'
+    ],function($ , _, Backbone, searchModel, autocompleteModel, restaurant, restaurantCollection, restaurantPageModel, appRouter){
 
     return function(){
-        var D1 = new dish({
-            dish: "orange chicken",
-            price: 20.0
-        });
-        var D2 = new dish({
-            dish: "orange chicken",
-            price: 10.0
-        });
-        var D3 = new dish({
-            dish: "orange chicken",
-            price: 5.0
-        });
 
-        var D4 = new dish({});
-        var D5 = new dish({});
-        var D6 = new dish({});
-        var D7 = new dish({});
-        var D8 = new dish({});
-        var D9 = new dish({});
-        var D10 = new dish({});
-        var D11 = new dish({});
+        //TODO: just a temporary solution before we make it into a view.
+        //this function activate the tap to slide and tap to close for the sidebar menu.
+        var setupSideBarMenuControl = function() {
+            var isSidebarOpen;
+         
+            $("a.sidebar-link").click(function(e) {
+                e.preventDefault();
+                if (isSidebarOpen !== true) {
+                    $(".b-top-container").animate({
+                        left: "277px"
+                    }, 100, "swing", function() {
+                        isSidebarOpen = true;
+                        $.pep.toggleAll(true);
+                    });
+                }
+                return false;
+            });
 
-        var menu = new dishCollection([D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11]);
+            $('.b-top-container').pep({
+                                axis:'x',
+                                constrainToParent: true,
+                                stop: function(e,obj) {
+                                    $(obj.el).animate({
+                                        left: "0px"
+                                    }, 10, "swing", function() {
+                                        isSidebarOpen = false;
+                                        $.pep.toggleAll(false);
+                                    });
+                                }
+                                });
+            $.pep.toggleAll(false);
 
-        var R1 = new restaurant({});
-        var R2 = new restaurant({});
-        var R3 = new restaurant({});
-        var R4 = new restaurant({});
-        var R5 = new restaurant({});
-        var R6 = new restaurant({});
-        var R7 = new restaurant({});
-        var R8 = new restaurant({});
-        var R9 = new restaurant({});
-        var R10 = new restaurant({});
-        var R11 = new restaurant({});
+            
+            $('div[data-role="page"]').live('pagebeforeshow', function(e) {
+                isSidebarOpen = false;
+                $(".b-top-container").animate({
+                                        left: "0px"
+                                    }, 100, "swing", function () {
+                                        isSidebarOpen = false;
+                                        $.pep.toggleAll(false);
+                                    });
+            });
+        };
 
-        var restaurants = new restaurantCollection([R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11]);
+        //TODO: just a temporary solution before we make it into a view.
+        //this function activate popover control.
+        var setUpPopOvers = function() {
+            $(".icon.incomplete-order").on("click",function(event){
+                event.preventDefault();
+               $(".b-popover.incomplete-order").toggle();
+            });
+        };
 
-        $('#menu').live('pageinit', function (event) {
-            $("#restaurant-name").trigger("create");
-            $("#restaurant-name").trigger("refresh");
-        });
+        var startApp = function() {
+            App.Routers.appRouter = new appRouter();
+            Backbone.history.start();
+        };
 
-        $('#dragger-bottom').on('click',function(){
-                $('div#wrapperparent').animate({
-                    height: '374px'
-                  },0,function(){
-                  $('#dragger-top').fadeIn(500).slideDown();
-                  $('#restaurant-info').slideUp(50);
-                  myScroll.refresh();
-              });
-        });
-        $('#dragger-top').on('click',function(){
-                $('#restaurant-info').slideDown(0,function(){
-                     $('div#wrapperparent').animate({
-                        height: '224px'
-                      },10,function(){
-                        myScroll.refresh();
-                      });
-                      
-                });
-        });
-        window.App = new appView({restaurantCollection: restaurants, menu: menu}); 
-    }
+        setupSideBarMenuControl();
+        setUpPopOvers();
+
+        //create global namespaces for Models, Collections, and Routers.
+        App.Models = App.Models || {};
+        App.Collections = App.Collections || {};
+        App.Routers = App.Routers || {};
+        
+        //initialize all models and collections here for the entire app.
+        App.Collections.restaurantCollection = new restaurantCollection([new restaurant()]);
+        App.Models.searchModel = new searchModel({collection: App.Collections.restaurantCollection});
+        App.Models.autocomplete = new autocompleteModel();
+
+        App.Models.restaurantPageModel = new restaurantPageModel();
+
+        //TODO: to be fixed-quirk in phonegap that pageinit is not triggered.
+        if(!App.environment.isMobileDevice){
+            $(document).on("pageinit",function() {
+                $(document).off("pageinit");
+                startApp();
+            });
+        } else {
+            startApp();
+            navigator.splashscreen.hide();
+        }
+    };
 });

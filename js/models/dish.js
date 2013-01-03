@@ -1,3 +1,4 @@
+//NOT USED YET.
 define([
     'jquery',
 	'underscore',
@@ -12,7 +13,7 @@ define([
                 calories: "N/A",
                 price: 10.0,
                 category: "appertizer"
-            }
+            };
         }
     });
     

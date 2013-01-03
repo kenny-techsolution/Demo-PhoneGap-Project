@@ -1,3 +1,4 @@
+//TODO: this is in progress.
 var myScroll;
 define([
     'jquery',
@@ -43,7 +44,7 @@ define([
             function loaded(){
             console.log("iscroll");
             console.log(iScroll);
-                  myScroll= new iScroll('wrapper',{
+            myScroll= new iScroll('wrapper',{
                   //snap: 'li',     // Would snap logically
                   // Snaps to each "P" tag
                   momentum: true,

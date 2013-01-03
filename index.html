@@ -1,98 +1,80 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-            <title>phonegap & jquery mobile boilerplate</title>
-                
-                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-                
-                <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
-                <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
-                <link rel="stylesheet" href="css/main.css" />
-                <!-- Fix for scrolling on iOS prior to iOS 6 -->
-                <!--
-                <script>
-                    var userAgent = navigator.userAgent + '';
-                    if (userAgent.indexOf('iPhone') > -1) {
-                        document.write('<script src="js/libs/cordova/cordova-iphone.js"></sc' + 'ript>');
-                        var mobile_system = 'iphone';
-                    } else if (userAgent.indexOf('Android') > -1) {
-                        document.write('<script src="js/lib/cordova/cordova-android.js"></sc' + 'ript>');
-                        var mobile_system = 'android';
-                    } else {
-                        var mobile_system = '';
-                    }
-                </script>   -->
-    </head>
-    <body>
-        
-        <!-- Start of first page -->
-        
-        <div data-role="page" id="home" data-position="fixed">
-            
-            <div data-role="header" data-position="fixed">
-                <h1 id="foo">Foo</h1>
-            </div><!-- /header -->
-            
-            <div data-role="content" id="main-content">
-                <div data-role="content" id="search">
-                    <input type="search" name="search" id="search-basic" value="" />
-                </div>
-                <button id="search-button">Button element</button>
-                <p>I'm first in the source order so I'm shown as the page.</p>
-                <p>View internal page called <a href="#bar">bar</a></p>
-            </div><!-- /content -->
-            
-            <div data-role="footer" data-position="fixed">
-                <h4>Page Footer</h4>
-            </div><!-- /footer -->
-        </div><!-- /page -->
-        
-        
-        <!-- Start of second page -->
-        <div data-role="page" id="result">
-            <div data-role="header" data-position="fixed" data-tap-toggle="false">
-                <a href="#foo" id="back-to-home" data-role="button" data-inline="true">Back</a><h1>Bar</h1>
-            </div><!-- /header -->
-            
-            <div data-role="content" >
-                <ul data-role="listview" data-theme="d" id="list-container">
-                </ul>
-            </div><!-- /content -->
-            
-            <div data-role="footer" data-position="fixed" data-tap-toggle="false">
-                <h4>Page Footer</h4>
-            </div><!-- /footer -->
-        </div><!-- /page -->
-        
-        <!-- Start of third page -->
-        <div data-role="page" id="menu">
-            <div id="restaurant-name" data-role="header" data-position="fixed" data-tap-toggle="false">
-                <a href="#bar" id="back-to-result" data-role="button" data-inline="true">Back</a><h1>Buchon French Restaurant</h1>
-            </div><!-- /header -->
-
-            <div data-role="content" id="container">
-                <div id="dragger-top"></div>
-                <div id="restaurant-info">
-                    <div id="dragger-bottom"></div>
-                </div>
-                <div id="wrapperparent">
-                    <div id="wrapper">
-                        <div id="scroller">
-                            <ul data-role="listview" data-theme="d" id="menu-container">
-                            </ul>
-                        </div>
-                    </div><!-- /content -->
-                </div>
+<head>
+    <title>Thank U Menu App</title>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />  -->  
+    <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/searchFormView.css" />
+    <link rel="stylesheet" href="css/searchResultsView.css" />
+    <link rel="stylesheet" href="css/restaurantPageView.css" />
+</head>
+<body>
+    <div class="b-sidebar">
+        <div class="b-main-menu">
+            <ul>
+                <li class="b-profile-brief">
+                    <div class="image"></div>
+                    <div class="name">Kenny Chung</div>
+                </li>
+                <li><a href="#">Account Setting</a></li>
+                <li><a href="#">Bookmarks</a></li>
+                <li><a href="#">Pending Order</a></li>
+                <li><a href="#">Completed Order</a></li>
+                <li><a href="#">Reviews</a></li>            
+            </ul>
+        </div>
+        <div class="b-discover">
+            <ul>
+                <li class="title">Discover</li>
+                <li><a href="#">Indian Cuisin</a></li>
+            </uL>
+        </div>
+    </div>
+    <div class="b-top-container">
+        <div class="b-header-control">
+            <div class="left">
+                <a href="#" class="icon sidebar-link"></a>
             </div>
-
-            <div id="menufooter" data-role="footer" data-position="fixed" data-tap-toggle="false">
-                <h4>Page Footer</h4>
-            </div><!-- /footer -->
-        </div><!-- /page -->
+            <div class = "right">
+                <a href="#search" class="icon search" data-transition="none"></a>
+                <a href="#" class="icon favorite-place"></a>
+                <a href="#" class="icon incomplete-order"></a>
+            </div>  
+        </div>
+        <div data-role="page" class="slidables pages" id="home">
+            <div data-role="content">
+                <p><strong>We love Food!</strong></p>              
+            </div>
+        </div>
         
-        <script type="text/javascript" src="js/libs/cordova/cordova-iphone.js"></script>
-        <script src="js/app/app.js"></script>
-        <script data-main="js/app/bootstrap.js" src="js/libs/require/require.js"></script>
-    </body>
+        <div data-role="page" class="pages" id="search-page">
+            <div data-role="content" class="content">
+
+            </div>
+        </div>
+        <div data-role="page" class="pages" id="result-page">
+            <div data-role="content" class="content">
+
+            </div>
+        </div>
+        <div data-role="page" class="pages" id="restaurant-page">
+            <div data-role="content" class="content">
+
+            </div>
+        </div>
+    </div>
+    <div class="b-popover incomplete-order">
+        <div class="arrow"></div>
+        <div class="body"></div>
+    </div>
+    <div class="b-popover favorite-place">
+        <div class="arrow"></div>
+        <div class="body"></div>
+    </div>
+    <script type="text/javascript" src="js/libs/cordova/cordova-iphone.js"></script>  
+    <script data-main="js/config.js" src="js/libs/require/require.js"></script>
+</body>
 </html>
