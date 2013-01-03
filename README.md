@@ -1,7 +1,7 @@
 #Castro-PhoneGap-Project
 =======================
 
-The www root of the PhoneGap project.
+This is www root of the PhoneGap project. You can download the phonegap project and put the files under www folder to build in the xcode and test it in the simulator. To test in normal browser, you must start a local server with www as your root folder because we use AMD require.js to load js file asynchronously.
 
 ##Version 0.01
 This iteration includes basic structure for non-restaurant user. It provides functionality for searching restaurant given keyword and address. The app will return the result and allow user to view it as a list or as a map. User can further explore the restaurant menu with the flow according to our UI design. 
