@@ -29,7 +29,13 @@ require.config({
     noext: 'libs/requirejsPlugins/noext',
     mdown: 'libs/requirejsPlugins/mdown',
     propertyParser : 'libs/requirejsPlugins/propertyParser',
-    markdownConverter : 'libs/requirejsPlugins/Markdown.Converter'
+    markdownConverter : 'libs/requirejsPlugins/Markdown.Converter',
+
+    //leaflet
+    leaflet: 'libs/leaflet/leaflet',
+    leafletGoogle: 'libs/leaflet/plugin/layer/tile/Google',
+    leafletBing: 'libs/leaflet/plugin/layer/tile/Bing',
+    markerClusterGroup: 'libs/leaflet/plugin/leaflet.markercluster',
   },
   text: {
     useXhr: function (url, protocol, hostname, port) {
@@ -45,8 +51,20 @@ require.config({
     underscore:{
         exports:'_'
     },
+    leaflet:{
+       exports:'L'
+    },
+    leafletGoogle:{
+      deps:['leaflet'],
+    },
+    leafletBing:{
+      deps:['leaflet'],
+    },
+    markerClusterGroup:{
+      deps:['leaflet'],
+    },
     jqueryMobile: ['jquery','jqueryMobileConfig'],
-    customJquery: ['jquery'],
+    customJquery: ['jquery','jqueryMobile'],
     pep: ['jquery']
    }
 });

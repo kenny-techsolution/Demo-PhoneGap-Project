@@ -10,9 +10,13 @@ define([
     'views/filterForm',
     'views/searchResults',
     'views/restaurantPage',
+    'leaflet',
+    'leafletGoogle',
+    'leafletBing',
+    'markerClusterGroup',
     'jqueryMobile',
     'async!http://maps.googleapis.com/maps/api/js?key=AIzaSyBMkuZ8BK3GRdnOL6sZNsEUg4Gk7IGp8Zk&sensor=false'
-	],function($, _, Backbone, searchFormView,filterFormView, searchResultsView, restaurantPageView){
+	],function($, _, Backbone, searchFormView,filterFormView, searchResultsView, restaurantPageView,L){
     var appRouter = Backbone.Router.extend({
         routes: {
             '': 'home',
@@ -43,15 +47,42 @@ define([
             $("#result-page .content").append(this.searchResultsView.render().el);
 
             //TODO: init the geocoder and map, should be moved to somewhere more appropriate.
+            //what is this? dont use  in other code
             App.geocoder = new google.maps.Geocoder() || {};
+
             $('#result-page').live('pagecreate', function () {
                 $(this).die();
+                L.Icon.Default.imagePath="../www/css/images/"
                 var mapOptions = {
                     zoom: 11,
-                    center: new google.maps.LatLng(40.006187,-83.017134),
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                };
-                App.map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions)||{};
+                    center: new L.LatLng(40.006187,-83.017134),
+                    zoom: 13,
+                    zoomAnimation:true
+                },  map = new L.Map(document.getElementById("map_canvas"), mapOptions),
+
+                //add openstreetmap lauer
+                    osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
+                    googleSatellite = new L.Google('SATELLITE'),
+                    googleHybrid = new L.Google('HYBRID'),
+                    googleRoadMap = new L.Google('ROADMAP'),
+                    mapQuest = new L.TileLayer('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {attribution:''}),
+                    markers = new L.MarkerClusterGroup();
+
+                //add bing- need to get api
+
+                map.addLayer(googleRoadMap);
+                map.addControl(new L.Control.Layers( {
+                        'OSM':osm,
+                        'Google Satellite':googleSatellite,
+                        'Google Hybrid':googleHybrid,
+                        'Google RoadMap':googleRoadMap,
+                        'MapQuest':mapQuest
+                    }, {}));
+
+                map.addLayer(markers);
+
+                App.map = map;
+                App.markers=markers;
             });
 
             //init restaurant page view.

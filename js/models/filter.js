@@ -12,6 +12,7 @@ define([
             price_max:100,
             age:40,
             Location:70,
+            
             numRemoteResults: 0,
             numLocalResults: 0,
             numPages: 0,
@@ -86,53 +87,7 @@ define([
         },
         getFromAjax: function(query, setting){
 
-            var item1 = new restaurant({
-                name: "Super Pho restaurant",
-                lat:39.972164,
-                lng:-82.913401,
-                distance: 2,
-                price: 14,
-                rating: 3.5
-            });
-            var item2 = new restaurant({
-                name: "Banjo French Bistro",
-                lat:39.995309,
-                lng:-83.007307,
-                distance: 5.3,
-                price: 6,
-                rating: 3
-            });
-            var item3 = new restaurant({
-                name: "5 Guys Burger",
-                lat:40.011332,
-                lng:-83.010897,
-                distance: 3.2,
-                price: 8,
-                rating: 4.5
-            });
-            var item4 = new restaurant({
-                name: "Tansuki Japnese",
-                lat:40.006153,
-                lng:-83.012216,
-                distance: 9,
-                price: 21,
-                rating: 3.5
-            });
-            var item5 = new restaurant({
-                name: "Panera",
-                lat:40.006364,
-                lng:-83.021006,
-                distance: 6,
-                price: 13,
-                rating: 5
-            });
-            var that  = this;
-            var collection= this.get("collection");
-            //console.log(collection.toJSON());
-            setTimeout(function(){
-                //console.log("lla");
-                collection.add([item1, item2, item3, item4, item5]);
-            },500);
+            
 
             //response will reset numRemotResult and numPages.
             //insert model into collection

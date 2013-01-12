@@ -40,6 +40,7 @@ define([
         switchToMap: function() {
             this.$(".map-container, .list, ").removeClass("hide");
             this.$(".b-result-list, .map, .b-sort-bar").addClass("hide");
+             App.map.invalidateSize(false);
         },
         switchToList: function() {
             this.$(".map-container, .list, ").addClass("hide");
@@ -49,14 +50,18 @@ define([
             Backbone.history.navigate("#filter-page",{trigger: true});
         },
         setMarkersOnMap: function() {
+            App.markers.clearLayers();
             this.collection.each(function(item){
-                var myLatlng = new google.maps.LatLng(item.get("lat"),item.get("lng"));
-                var marker = new google.maps.Marker({
-                    position: myLatlng,
-                    title: item.get("name")
-                });
-                marker.setMap(App.map);
+                //todo  use name image and other data (in html format) for title
+                console.log(item.toJSON());
+                var title=item.get('name'),
+                    marker = new L.Marker(new L.LatLng(item.get("lat"), item.get("lng")), { title: title });
+                console.log(title);
+                marker.bindPopup(title);
+                App.markers.addLayer(marker);
             });
+            App.map.fitBounds(App.markers.getBounds());
+            
         },
         sortByDistance: function() {
             $("#result-page").addLoadingSpinner();
