@@ -14,6 +14,7 @@ define([
         events: {
             'click .map': 'switchToMap',
             'click .list':'switchToList',
+            'click .filter': 'switchToFilter',
             'click .distance':'sortByDistance',
             'click .price':'sortByPrice',
             'click .rating':'sortByRating'
@@ -43,6 +44,9 @@ define([
         switchToList: function() {
             this.$(".map-container, .list, ").addClass("hide");
             this.$(".b-result-list, .map, .b-sort-bar").removeClass("hide");
+        },
+        switchToFilter : function() {
+            Backbone.history.navigate("#filter-page",{trigger: true});
         },
         setMarkersOnMap: function() {
             this.collection.each(function(item){

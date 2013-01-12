@@ -7,17 +7,20 @@ define([
 	'underscore',
 	'Backbone',
     'views/searchForm',
+    'views/filterForm',
     'views/searchResults',
     'views/restaurantPage',
     'jqueryMobile',
-    'async!http://maps.googleapis.com/maps/api/js?key=AIzaSyAm6QQX3Gx-Lg3efcgiUPGlbbklIaUBozA&sensor=false'
-	],function($, _, Backbone, searchFormView, searchResultsView, restaurantPageView){
+    'async!http://maps.googleapis.com/maps/api/js?key=AIzaSyBMkuZ8BK3GRdnOL6sZNsEUg4Gk7IGp8Zk&sensor=false'
+	],function($, _, Backbone, searchFormView,filterFormView, searchResultsView, restaurantPageView){
     var appRouter = Backbone.Router.extend({
         routes: {
             '': 'home',
             'search': 'search',
             'result' : 'result',
-            'restaurant': 'restaurant'
+            'restaurant': 'restaurant',
+            'filter-page':'filterPage',
+            'filter-page&ui-state=dialog':'filterPageDailog'
         },
         initialize: function() {
             //init search form view.
@@ -26,6 +29,11 @@ define([
                 searchModel: App.Models.searchModel
             });
             $("#search-page .content").append(this.searchFormView.render().el);
+
+            this.filterFormView = new filterFormView({
+                filterModel: App.Models.filterModel
+            });
+            $("#filter-page .content").append(this.filterFormView.render().el);
             
             //init search result view.
             this.searchResultsView = new searchResultsView({
@@ -72,6 +80,13 @@ define([
         restaurant: function(){
             $(".b-header-control").show();
             $.mobile.changePage( "#restaurant-page" , { transition: "slide", reverse:false, changeHash: false});
+        },
+        filterPage : function() {
+            $(".b-header-control").hide();
+            $.mobile.changePage( "#filter-page" , { transition: "none", reverse:false, changeHash: false});
+        },
+        filterPageDailog : function(){
+            $(".b-header-control").hide();
         },
         //For testing only
         initRestaurantModelFomAPI: function() {

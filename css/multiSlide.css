@@ -1,0 +1,31 @@
+.multi-slider{
+    position: relative;
+    height: 32px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.multi-slider label{
+    position: absolute;
+    top: -30px;
+    left: 10px;
+}                            
+/* moves label field */
+.multi-slider .min-slider{
+    top: -40px;
+    position: absolute;
+    left: 60px;
+}       /* moves first input field */ 
+.multi-slider .max-slider{
+    top: -40px;
+    position: absolute;
+    left: 130px;
+}      /* move second input field */ 
+.multi-slider div.ui-slider{
+    position: absolute;
+    margin-top:6px;
+}
+/* move both sliders - adressing 1st slider with CSS is hard */ 
+.multi-slider div:last-child{
+    position: absolute;
+    left: 0px;
+}

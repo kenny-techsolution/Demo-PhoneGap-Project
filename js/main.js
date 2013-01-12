@@ -9,6 +9,7 @@ define([
 	'underscore',
 	'Backbone',
     'models/search',
+    'models/filter',
     'models/autocomplete',
     'models/restaurant',
     'collections/restaurant',
@@ -16,7 +17,7 @@ define([
     'routers/app',
     'jqueryMobile',
     'pep'
-    ],function($ , _, Backbone, searchModel, autocompleteModel, restaurant, restaurantCollection, restaurantPageModel, appRouter){
+    ],function($ , _, Backbone, searchModel, filterModel, autocompleteModel, restaurant, restaurantCollection, restaurantPageModel, appRouter){
 
     return function(){
 
@@ -89,6 +90,7 @@ define([
         //initialize all models and collections here for the entire app.
         App.Collections.restaurantCollection = new restaurantCollection([new restaurant()]);
         App.Models.searchModel = new searchModel({collection: App.Collections.restaurantCollection});
+        App.Models.filterModel = new filterModel({});
         App.Models.autocomplete = new autocompleteModel();
 
         App.Models.restaurantPageModel = new restaurantPageModel();
