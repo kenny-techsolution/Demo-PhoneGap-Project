@@ -6,6 +6,8 @@ define([
     'jquery',
 	'underscore',
 	'Backbone',
+    'views/loginForm',
+    'views/registerForm',
     'views/searchForm',
     'views/filterForm',
     'views/searchResults',
@@ -16,10 +18,13 @@ define([
     'markerClusterGroup',
     'jqueryMobile',
     'async!http://maps.googleapis.com/maps/api/js?key=AIzaSyBMkuZ8BK3GRdnOL6sZNsEUg4Gk7IGp8Zk&sensor=false'
-	],function($, _, Backbone, searchFormView,filterFormView, searchResultsView, restaurantPageView,L){
+	],function($, _, Backbone, loginFormView,registerFormView,searchFormView,filterFormView, searchResultsView, restaurantPageView,L){
     var appRouter = Backbone.Router.extend({
         routes: {
             '': 'home',
+            'home': 'home',
+            'login-page': 'loginPage',
+            'register': 'registerPage',
             'search': 'search',
             'result' : 'result',
             'restaurant': 'restaurant',
@@ -34,6 +39,16 @@ define([
             });
             $("#search-page .content").append(this.searchFormView.render().el);
 
+            this.loginFormView = new loginFormView({
+                userModel: App.Models.userModel,
+            });
+            $("#login-page .content").append(this.loginFormView.render().el);
+
+            this.registerFormView = new registerFormView({
+                userModel: App.Models.userModel,
+            });
+            $("#register-page .content").append(this.registerFormView.render().el);
+            
             this.filterFormView = new filterFormView({
                 filterModel: App.Models.filterModel
             });
@@ -90,14 +105,27 @@ define([
             $("#restaurant-page .content").append(this.restaurantPageView.render().el);
 
             $('#search-page').live('pageshow', function () {
-                //alert("test");
                 $(".search-text").focus().select();
             });
             this.initRestaurantModelFomAPI();
         },
         home: function() {
-            $(".b-header-control").show();
-            $.mobile.changePage( "#home" , { transition: "none", reverse:false, changeHash: false});
+            if(App.Models.user.get('sessionID')!=0){
+                $(".b-header-control").show();
+                    $.mobile.changePage( "#home" , { transition: "none", reverse:false, changeHash: false});
+            }
+            else{
+                this.loginPage();
+            }
+            
+        },
+        loginPage: function() {
+            $(".b-header-control").hide();
+            $.mobile.changePage( "#login-page" , { transition: "none", reverse:false, changeHash: false});
+        },
+         registerPage: function() {
+            $(".b-header-control").hide();
+            $.mobile.changePage( "#register-page" , { transition: "none", reverse:false, changeHash: false});
         },
         search: function() {
             $(".b-header-control").hide();

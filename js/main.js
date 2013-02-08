@@ -8,6 +8,7 @@ define([
     'jquery',
 	'underscore',
 	'Backbone',
+	'models/user',
     'models/search',
     'models/filter',
     'models/autocomplete',
@@ -17,9 +18,9 @@ define([
     'routers/app',
     'jqueryMobile',
     'pep'
-    ],function($ , _, Backbone, searchModel, filterModel, autocompleteModel, restaurant, restaurantCollection, restaurantPageModel, appRouter){
+    ],function($ , _, Backbone, userModel, searchModel, filterModel, autocompleteModel, restaurant, restaurantCollection, restaurantPageModel, appRouter){
 
-    return function(){
+    return function() {
 
         //TODO: just a temporary solution before we make it into a view.
         //this function activate the tap to slide and tap to close for the sidebar menu.
@@ -92,6 +93,14 @@ define([
         App.Models.searchModel = new searchModel({collection: App.Collections.restaurantCollection});
         App.Models.filterModel = new filterModel({});
         App.Models.autocomplete = new autocompleteModel();
+        App.Models.user = new userModel();
+
+        FB.init({
+            appId: '563604660336106',
+            appSecret: '434cd49636b8f28dbb57d7772edafc17',
+            nativeInterface: CDV.FB,
+            useCachedDialogs: false
+        });
 
         App.Models.restaurantPageModel = new restaurantPageModel();
 

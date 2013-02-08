@@ -72,11 +72,17 @@ require.config({
 //init app based on type of device. 
 require(['main'], function(main) {
   var isDeviceReady = false,
-      App = window.App = window.App || {};
+    App = window.App = window.App || {};
 
-  App.environment = { isMobileDevice: (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) ? true : false }|| {};
-  
+  App.environment = {
+    isMobileDevice: (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) ? true : false
+  } || {};
   //any necessary setup logic before calling main() goes here.
+  $(document).ajaxError(function(ev, res) {
+    console.log(JSON.stringify(res));
+  });
+
+
   var onDeviceReady = function() {
     main();
   };
