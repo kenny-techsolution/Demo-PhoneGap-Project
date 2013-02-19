@@ -2,109 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01594cb6-c36b-4b91-85c3-9e3abfdb759e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/restaurantContainer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/searchControl.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/searchResultContainer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/archive/search/autocompleteView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/archive/search/locationHistoryCollectionView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/archive/search/locationHistoryItemView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/archive/search/locationHistoryView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/archive/search/searchCompositeView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/archive/search/searchControlView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/archive/search/searchControllerModel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/archive/searchContainer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/archive/templates/searchContainerTemplate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/archive/views/restaurantPage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/collections/dishCollection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/collections/locationHistoryCollection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/collections/restaurantDetailCollection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/collections/resultPaginatedCollection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/containers/restaurantContainer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/containers/searchResultContainer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/libs/backbone/backbone-latest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/libs/localstorageCache/localstorageCache.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/libs/mockjax/mockjax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/libs/modernizr/modernizr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/mocks/json/get_menu_1241243.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/mocks/json/get_menu_1593522.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/mocks/json/get_menu_3513535.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/mocks/json/get_menu_bigsize.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/mocks/json/get_menu_bigsize_compressed.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/mocks/json/get_restaurant_123.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/mocks/json/get_search_default_p1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/mocks/json/get_search_init.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/models/dishModel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/models/locationHistoryModel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/models/menuModel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/models/restaurantDetailModel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/models/restaurantModel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/autocompleteModule.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/dishModule.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/loaderModule.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/locationHistoryModule.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/menuModule.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/restaurantInfoModule.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/searchControlModule.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/searchResultListModule.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/searchSortModule.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/navigations/phoneNavigationController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/routers/phoneRouter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/templates/autocompleteTemplate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/templates/dishTemplate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/templates/locationHistoryItemTemplate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/templates/menuTemplate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/templates/phoneNavigationTemplate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/templates/restaurantContainerTemplate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/templates/restaurantInfoTemplate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/templates/searchControlTemplate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/templates/searchResultContainerTemplate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/templates/searchResultListItemTemplate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/templates/searchSortTemplate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/util/cpCollectionModelFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/util/cpCollectionViewClass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/util/cpItemViewFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/util/cpViewClass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/util/historyStackManager.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/restaurantPageView.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/searchFormView.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/searchResultsView.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/models/restaurant.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/models/search.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/views/restaurantPage.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/phoneNavigation.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/collections/dish.js" afterPath="$PROJECT_DIR$/js/archive/dish.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/collections/location.js" afterPath="$PROJECT_DIR$/js/archive/location.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/collections/menu.js" afterPath="$PROJECT_DIR$/js/archive/menu.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/collections/menuCategory.js" afterPath="$PROJECT_DIR$/js/archive/menuCategory.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/collections/restaurant.js" afterPath="$PROJECT_DIR$/js/archive/restaurant.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/collections/restaurantResultList.js" afterPath="$PROJECT_DIR$/js/archive/restaurantResultList.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/models/autocomplete.js" afterPath="$PROJECT_DIR$/js/archive/autocomplete.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/models/dish.js" afterPath="$PROJECT_DIR$/js/archive/models/dish.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/models/location.js" afterPath="$PROJECT_DIR$/js/archive/models/location.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/models/menu.js" afterPath="$PROJECT_DIR$/js/archive/models/menu.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/models/menuCategory.js" afterPath="$PROJECT_DIR$/js/archive/models/menuCategory.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/models/restaurantPage.js" afterPath="$PROJECT_DIR$/js/archive/restaurantPage.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/routers/app.js" afterPath="$PROJECT_DIR$/js/archive/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/templates/locationHistory.html" afterPath="$PROJECT_DIR$/js/archive/locationHistory.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/templates/menuRow.html" afterPath="$PROJECT_DIR$/js/archive/menuRow.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/templates/restaurantPage.html" afterPath="$PROJECT_DIR$/js/archive/restaurantPage.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/templates/restaurantRow.html" afterPath="$PROJECT_DIR$/js/archive/restaurantRow.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/templates/resultList.html" afterPath="$PROJECT_DIR$/js/archive/resultList.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/templates/searchForm.html" afterPath="$PROJECT_DIR$/js/archive/searchForm.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/templates/searchResults.html" afterPath="$PROJECT_DIR$/js/archive/searchResults.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/views/locationHistory.js" afterPath="$PROJECT_DIR$/js/archive/views/locationHistory.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/views/restaurantListItem.js" afterPath="$PROJECT_DIR$/js/archive/views/restaurantListItem.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/views/resultList.js" afterPath="$PROJECT_DIR$/js/archive/views/resultList.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/views/searchForm.js" afterPath="$PROJECT_DIR$/js/archive/views/searchForm.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/views/searchResults.js" afterPath="$PROJECT_DIR$/js/archive/views/searchResults.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/config.js" afterPath="$PROJECT_DIR$/js/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/libs/backbone/backbone.js" afterPath="$PROJECT_DIR$/js/libs/backbone/backbone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/libs/jmobile/jquery.mobile-config.js" afterPath="$PROJECT_DIR$/js/libs/jmobile/jquery.mobile-config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/libs/jmobile/jquery.mobile.js" afterPath="$PROJECT_DIR$/js/libs/jmobile/jquery.mobile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/libs/pep/jquery.pep.min.js" afterPath="$PROJECT_DIR$/js/libs/pep/jquery.pep.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/util/customJquery.js" afterPath="$PROJECT_DIR$/js/util/customJquery.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/autocomplete.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/dish.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/location.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/locationHistory.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/menu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/menuCategory.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/menuRow.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/models/dish.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/models/location.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/models/menu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/models/menuCategory.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/restaurant.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/restaurantPage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/restaurantPage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/restaurantResultList.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/restaurantRow.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/resultList.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search/autocompleteView.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search/locationHistoryCollectionView.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search/locationHistoryItemView.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search/locationHistoryView.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search/searchCompositeView.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search/searchControlView.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search/searchControllerModel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/searchContainer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/searchForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/searchResults.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/templates/searchContainerTemplate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/views/locationHistory.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/views/restaurantListItem.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/views/restaurantPage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/views/resultList.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/views/searchForm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/views/searchResults.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -124,28 +58,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="27" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="3" column="6" selection-start="36" selection-end="36" vertical-scroll-proportion="-1.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="location.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/archive/models/location.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="14" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -205,13 +121,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.pep.min.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="jquery.pep.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/libs/pep/jquery.pep.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="29" selection-start="5381" selection-end="5381" vertical-scroll-proportion="0.22463769">
+            <state line="93" column="29" selection-start="5381" selection-end="5381" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1361263852000" expanded="false" signature="23308:23356" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="9" selection-start="461" selection-end="461" vertical-scroll-proportion="0.5504587">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -582,14 +507,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="22" width="1276" height="778" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34361234" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26872247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22682928" sideWeight="0.53881276" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28292683" sideWeight="0.7312775" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28292683" sideWeight="0.7312775" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22682928" sideWeight="0.5449011" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -659,13 +584,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/models/restaurantModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="40" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/collections/dishCollection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="37" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
@@ -715,13 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/archive/models/location.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="14" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/containers/restaurantContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="86" column="58" selection-start="3354" selection-end="3354" vertical-scroll-proportion="0.0">
@@ -766,10 +677,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/libs/pep/jquery.pep.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="29" selection-start="5381" selection-end="5381" vertical-scroll-proportion="0.22463769">
+        <state line="93" column="29" selection-start="5381" selection-end="5381" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1361263852000" expanded="false" signature="23308:23356" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="9" selection-start="461" selection-end="461" vertical-scroll-proportion="0.5504587">
+          <folding />
         </state>
       </provider>
     </entry>
