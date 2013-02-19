@@ -3,6 +3,8 @@
 
 This is www root of the PhoneGap project. You can download the phonegap project and put the files under www folder to build in the xcode and test it in the simulator. To test in normal browser, you must start a local server with www as your root folder because we use AMD require.js to load js file asynchronously.
 
+To built it on IOS: follow the instruction on phonegap. and replace wwww folder with our code except the corvodaXXXX.js. Then change the cordova version number in the index.html.then build it as instructed on phonegap website.
+
 ##Version 0.01
 This iteration includes basic structure for non-restaurant user. It provides functionality for searching restaurant given keyword and address. The app will return the result and allow user to view it as a list or as a map. User can further explore the restaurant menu with the flow according to our UI design. 
 
