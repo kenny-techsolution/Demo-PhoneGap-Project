@@ -1,0 +1,192 @@
+#restaurant-page .content {
+    position: absolute;
+    margin-top: 42px;
+    margin-bottom: 0px;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    right: 0;
+    background-color: #ffffe0;
+}
+#restaurant-page .b-info-container {
+    padding: 20px;
+    background-color: #ffffe0;
+}
+#restaurant-page .b-restaurant-info { }
+#restaurant-page .b-restaurant-info .restaurant-name {
+    width: 100%;
+    height: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#restaurant-page .b-restaurant-info .b-restaurant-status-icons div {
+    display: inline-block;
+    font-size: 10px;
+    width: 30%;
+    height: 25px;
+}
+#restaurant-page .b-restaurant-info .restaurant-phone,
+#restaurant-page .b-restaurant-info .restaurant-address {
+    width: 100%;
+    font-weight: bold;
+    height: 18px;
+    font-size: 10px;
+}
+#restaurant-page .b-menu-container .title {
+    position: relative;
+    color: #FFFFFF;
+    width: 100%;
+    display: block;
+    height: 40px;
+    background-color: #3E3E3E;
+    border-bottom: 1px solid #777777;
+}
+#restaurant-page .b-menu-container .title .title-name {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+#restaurant-page .b-menu-container ul.dish-list {
+    background-color: #ffffe0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#restaurant-page .b-menu-container ul.dish-list li {
+    display: block;
+    position: relative;
+    border-bottom: 1px solid #a9a9a9;
+    width: 100%;
+    height: 40px;
+}
+#restaurant-page .b-menu-container ul.dish-list li .dish-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #eee8aa;
+    background-color: #a9a9a9;
+}
+#restaurant-page .b-menu-container ul.dish-list li .dish-description {
+    position: absolute;
+    left: 60px;
+    top: 0px;
+    right: 70px;
+    height: 100%;
+}
+#restaurant-page .b-menu-container ul.dish-list li .name {
+    padding-top: 2px;
+    font-size: 14px;
+}
+#restaurant-page .b-menu-container ul.dish-list li .ingridient {    font-size: 11px }
+#restaurant-page .b-menu-container ul.dish-list li .dish-price {
+    position: absolute;
+    width: 60px;
+    right: 10px;
+    top: 10px;
+    height: 100%;
+}
+/*menu tab*/
+#restaurant-page .b-tab-group div {
+    font-size: 12px;
+    display: inline-block;
+    height: 20px;
+    border-top: 1px solid #708090;
+    border-left: 1px solid #708090;
+    border-right: 1px solid #708090;
+    padding: 2px 14px 2px 14px;
+}
+#restaurant-page .b-tab-group .active {
+    background: #3E3E3E;
+    color: white;
+}
+#restaurant-page .b-content-group {    border: 1px solid #3E3E3E }
+#restaurant-page .b-menu-container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#restaurant-page .b-menu-container .before-load {
+    display: block;
+    height: 140px;
+    width: 100%;
+    background-color: #a9a9a9;
+    position: relative;
+}
+/*dish view*/
+#restaurant-page .b-pep-container {
+    display: block;
+    width: 600px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 320px;
+    z-index: 900;
+    text-shadow: none;
+    color: white;
+}
+#restaurant-page .b-pep-container .b-pep-floating-layer {
+    display: block;
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    position: absolute;
+}
+#restaurant-page .pep-node {
+    width: 280px;
+    height: 100%;
+}
+#restaurant-page .b-dish-view {
+    width: 100%;
+    height: 100%;
+    background-color: #696969;
+}
+#restaurant-page .b-dish-view .image {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-color: #908e78;
+}
+#restaurant-page .b-dish-view .image .image-body {
+    position: absolute;
+    display: block;
+    font-size: 18px;
+    width: 250px;
+    color: #dddddd;
+    top: 110px;
+    left: 30px;
+}
+#restaurant-page .b-dish-view .b-info {
+    display: block;
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 35px;
+    background-color: #696969;
+}
+#restaurant-page .b-dish-view .b-info div {
+    font-size: 10px;
+    display: inline-block;
+    width: 90px;
+    height: 15px;
+    color: white;
+    background-color: #696969;
+    border: 1px solid #a9a9a9;
+    float: left;
+}
+#restaurant-page .b-dish-view .b-description {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 235px;
+    bottom: 0px;
+    background-color: #194b7e;
+}
+#restaurant-page .b-dish-view .b-description .section-1 {
+    position: absolute;
+    font-size: 12px;
+    top: 15px;
+    left: 30px;
+}

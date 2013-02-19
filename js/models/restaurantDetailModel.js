@@ -1,0 +1,53 @@
+/**
+ * restaurant detail model presents restaurant detail data object
+ *
+ * @author: Kenny Chung
+ */
+define([
+    'jquery',
+    'underscore',
+    'Backbone'
+],function($,_,Backbone){
+    return Backbone.Model.extend({
+        idAttribute: "_id",
+        urlRoot: "http://ramin.prod.thankyoumenu.com:3080/v1/restaurant/",
+        defaults: {
+            "id":1,
+            "restaurantId": 1324,
+            "restaurantName": "The Farm House",
+            "numberOfSeats" : 50 ,
+            "indoorSeating" : true,
+            "outdoorSeating" : false,
+            "serveAlchohole" : true,
+            "hasBar" : true ,
+            "smokingArea" : false ,
+            "images" : [
+                {
+                    "id" :  14245,
+                    "path" : "/img/restaurant1.png",
+                    "image_use_id" : 1242
+                },
+                {
+                    "id" :  14235,
+                    "path" : "/img/restaurant2.png",
+                    "image_use_id" : 1246
+                }
+            ],
+            "types" : [
+                {
+                    "name" : "family friendly",
+                    "description" : "come check out the place"
+                }
+            ],
+            "address" : "6104 family drive, columbus, ohio 43915",
+            "phone" : "(951) 845-2027",
+            "rating" : 4.5,
+            "defaultMenu": 1593522,
+            "menus" : [
+                1593522,
+                1241243,
+                3513535
+            ]
+        }
+    });
+});

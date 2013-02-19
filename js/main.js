@@ -1,107 +1,63 @@
 /**
-* This module does two things:
-* 1. setup basic app frame interaction.
-* 2. create all collections and models needed for the entire app.
-* (c) 2012 Kenny Chung
+* This main function does two things:
+* 1. create all collections and models needed for the entire app.
+* 2. initialize the main navigation controller then start the history.
+ *
+* @author: Kenny Chung 2013
 */
 define([
     'jquery',
-	'underscore',
+    'underscore',
 	'Backbone',
-    'models/search',
-    'models/autocomplete',
-    'models/restaurant',
-    'collections/restaurant',
-    'models/restaurantPage',
-    'routers/app',
+    'mocks/mockSetup',
+    'navigations/phoneNavigationController',
+    'models/locationHistoryModel',
+    'util/cpCollectionModelFactory',
+    'collections/locationHistoryCollection',
+    'collections/resultPaginatedCollection',
+    'routers/phoneRouter',
+    'util/historyStackManager',
+    'pubsub',
     'jqueryMobile',
+    'localstorageCache',
     'pep'
-    ],function($ , _, Backbone, searchModel, autocompleteModel, restaurant, restaurantCollection, restaurantPageModel, appRouter){
+    ],function($ , _, Backbone, mockSetup,phoneNavigationController, locationHistoryModel, cpCollectionModelFactory, locationHistoryCollection, resultPaginatedCollection, phoneRouter, historyStackManager, pubsub){
 
     return function(){
 
-        //TODO: just a temporary solution before we make it into a view.
-        //this function activate the tap to slide and tap to close for the sidebar menu.
-        var setupSideBarMenuControl = function() {
-            var isSidebarOpen;
-         
-            $("a.sidebar-link").click(function(e) {
-                e.preventDefault();
-                if (isSidebarOpen !== true) {
-                    $(".b-top-container").animate({
-                        left: "277px"
-                    }, 100, "swing", function() {
-                        isSidebarOpen = true;
-                        $.pep.toggleAll(true);
-                    });
-                }
-                return false;
-            });
-
-            $('.b-top-container').pep({
-                                axis:'x',
-                                constrainToParent: true,
-                                stop: function(e,obj) {
-                                    $(obj.el).animate({
-                                        left: "0px"
-                                    }, 10, "swing", function() {
-                                        isSidebarOpen = false;
-                                        $.pep.toggleAll(false);
-                                    });
-                                }
-                                });
-            $.pep.toggleAll(false);
-
-            
-            $('div[data-role="page"]').live('pagebeforeshow', function(e) {
-                isSidebarOpen = false;
-                $(".b-top-container").animate({
-                                        left: "0px"
-                                    }, 100, "swing", function () {
-                                        isSidebarOpen = false;
-                                        $.pep.toggleAll(false);
-                                    });
-            });
-        };
-
-        //TODO: just a temporary solution before we make it into a view.
-        //this function activate popover control.
-        var setUpPopOvers = function() {
-            $(".icon.incomplete-order").on("click",function(event){
-                event.preventDefault();
-               $(".b-popover.incomplete-order").toggle();
-            });
-        };
+        //mock setup is used to provide fake ajax response for development purpose.
+        mockSetup();
 
         var startApp = function() {
-            App.Routers.appRouter = new appRouter();
+            App.mainNavigationController = new phoneNavigationController({resultCollection: App.Collections.resultPaginatedCollection});
+            //render the navigation controller's layout.
+            $("body").prepend(App.mainNavigationController.render().el).each(function(){
+                //called when the Dom has been rendered.
+                $(this).trigger("create");
+                pubsub.publish("initialDOM:Loaded");
+            });
+            //manually calling jqm's page enhencement after the Dom is inserted.
+            $.mobile.initializePage();
+            App.historyStackManager = new historyStackManager();
+            App.Routers.phoneRouter = new phoneRouter();
             Backbone.history.start();
+            if(App.environment.isMobileDevice){
+                navigator.splashscreen.hide();
+            }
         };
-
-        setupSideBarMenuControl();
-        setUpPopOvers();
 
         //create global namespaces for Models, Collections, and Routers.
         App.Models = App.Models || {};
         App.Collections = App.Collections || {};
         App.Routers = App.Routers || {};
         
-        //initialize all models and collections here for the entire app.
-        App.Collections.restaurantCollection = new restaurantCollection([new restaurant()]);
-        App.Models.searchModel = new searchModel({collection: App.Collections.restaurantCollection});
-        App.Models.autocomplete = new autocompleteModel();
+        //initialize necessary models and collections here for the entire app.
+        App.Collections.locationHistoryCollection = new locationHistoryCollection([new locationHistoryModel()]);
+        //cpCollectionModelFactory class is a convinient class that allows you to create collection by configuring model on runtime.
+        App.Collections.autocompleteCollection = new cpCollectionModelFactory({defaults: {keyword: ""}});
+        App.Collections.resultPaginatedCollection = new resultPaginatedCollection();
 
-        App.Models.restaurantPageModel = new restaurantPageModel();
+        startApp();
 
-        //TODO: to be fixed-quirk in phonegap that pageinit is not triggered.
-        if(!App.environment.isMobileDevice){
-            $(document).on("pageinit",function() {
-                $(document).off("pageinit");
-                startApp();
-            });
-        } else {
-            startApp();
-            navigator.splashscreen.hide();
-        }
     };
 });

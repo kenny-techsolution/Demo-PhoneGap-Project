@@ -9,5 +9,7 @@ define(['jquery'], function ($) {
             $.support.cors = true;
             $.mobile.allowCrossDomainPages = true;
             isMobileinit = true;
+            $.mobile.autoInitializePage = false;
+            //$.mobile.ignoreContentEnabled=true;
       });
 });

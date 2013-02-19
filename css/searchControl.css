@@ -1,0 +1,46 @@
+.b-search-container .b-input-area{
+    background-color: #59514E;
+    position: absolute;
+    left: 0px;
+    right: 85px;
+    height: 100%;
+}
+.b-search-container .b-input-area input {
+    width:100%;
+}
+.b-search-container .b-input-area .keyword-box{
+    margin-top: 4px;
+    height: 38px;
+    width: 100%;
+    display: block;
+}
+.b-search-container .b-input-area .location-box{
+    height: 42px;
+    width: 100%;
+    display: block;
+}
+.b-search-container .b-input-area .location-box .ui-field-contain,
+.b-search-container .b-input-area .keyword-box .ui-field-contain{
+    padding:0;
+}
+.b-search-container .b-button-area{
+    display: block;
+    background-color: #59514E;
+    float: left;
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+}
+
+.b-search-container .b-button-area .b-search-button,
+.b-search-container .b-button-area .b-filter-button{
+    font-size: 9px;
+    width:90%;
+    height:42px;
+    background-color: #59514E;
+}
+.b-search-container .b-button-area .b-search-button {
+    padding-top: 2px;
+    height:38px;
+}

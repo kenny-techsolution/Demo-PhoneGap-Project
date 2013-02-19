@@ -1,0 +1,16 @@
+<div class="b-restaurant-info">
+    <div class="restaurant-name"><%= item.restaurantName %></div>
+    <div class="b-restaurant-status-icons">
+        <div class="restaurant-seats"><%= item.numberOfSeats %> seats</div>
+        <div class="restaurant-indoorSeating"><%= item.indoorSeating %> seats</div>
+        <div class="restaurant-smoking">
+            <% if(item.smokingArea){%>
+            "Smoking allowed"
+            <%}else{%>
+            "Smoking forbidded"
+            <% } %>
+        </div>
+    </div>
+    <div class="restaurant-phone"><%= item.phone %></div>
+    <div class="restaurant-address"><%= item.address %></div>
+</div>

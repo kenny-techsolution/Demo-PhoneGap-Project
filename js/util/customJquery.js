@@ -1,3 +1,8 @@
+/**
+*please put all jquery custom functions here.
+ *
+* @author: Kenny Chung
+*/
 ;(function($){
 	//add loading spinner
 	$.fn.addLoadingSpinner = function(){

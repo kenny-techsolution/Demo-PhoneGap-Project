@@ -1,0 +1,19 @@
+<% _.each(sections, function(section) { %>
+    <div class="section">
+        <div class="title  expanded">
+            <div class="title-name"><%=section.description%></div>
+        </div>
+        <ul class="dish-list">
+            <% _.each(section.items, function(item) { %>
+            <li class="dish-item" data-dishid="<%=item.id%>">
+                <div class="dish-image"></div>
+                <div class="dish-description">
+                    <div class="name"><%=item.item_name%></div>
+                    <div class="ingridient"><%=item.description%></div>
+                </div>
+                <div class="dish-price"><%=item.price%></div>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+<% }); %>

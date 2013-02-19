@@ -1,0 +1,149 @@
+.ui-content {    padding: 0px }
+#result-page .content {
+    position: absolute;
+    margin-top: 42px;
+    margin-bottom: 0px;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    right: 0;
+}
+/*result-page*/
+.b-result {
+    top: 60px;
+    bottom: 0px;
+    height: auto;
+    width: 100%;
+    position: absolute;
+}
+#result-page .b-search-result-list {
+    padding: 0;
+    width: 100%;
+}
+/*result item*/
+#result-page  .result-item {
+    position: relative;
+    background-color: #f8f8ff;
+    display: block;
+    height: 80px;
+    width: 100%;
+    border: 1px solid #a9a9a9;
+}
+#result-page  .result-item .image {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #2f4f4f;
+    background-color: #fafad2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#result-page  .result-item .info {
+    left: 80px;
+    height: 80px;
+    right: 50px;
+    border: 1px solid #2f4f4f;
+    position: absolute;
+}
+#result-page  .result-item .info div {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+}
+#result-page  .result-item .info .restaurantName {
+    padding-top: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+}
+#result-page  .result-item .info .restaurantRating {
+    line-height: 10px;
+    font-size: 10px;
+    color: black;
+}
+#result-page  .result-item .info .restaurantAddress,
+#result-page  .result-item .info .restaurantPhone {
+    line-height: 13px;
+    font-size: 9px;
+    color: #a9a9a9;
+}
+#result-page  .result-item .status {
+    top: 0px;
+    right: 0px;
+    height: 80px;
+    width: 50px;
+    border: 1px solid #2f4f4f;
+    position: absolute;
+}
+/*sort module*/
+#result-page  .b-sort-container {
+    background-color: #999999;
+    height: 30px;
+    width: 100%;
+    border-bottom: 1px solid #111111;
+}
+#result-page  .b-sort-container div.button {
+    margin-top: 4px;
+    margin-left: 2%;
+    display: block;
+    float: left;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #FFFFFF;
+    width: 30%;
+    height: 20px;
+    font-size: 12px;
+    color: #222222;
+    font-weight: bold;
+    text-align: center;
+}
+#result-page .b-sort-container div.selected {
+    background-color: #3DBCE3;
+    color: #FFFFFF;
+}
+/*result scroller*/
+#result-page #wrapper {
+    z-index: 2;
+    position: absolute;
+    padding: 0;
+    top: 0px;
+    bottom: 0px;
+    background-color: #f8f8ff;
+    left: 0px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+#result-page  #scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    padding: 0;
+}
+/*search summary*/
+#result-page .b-result-summary {
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: #000000;
+}
+#result-page .b-result-summary .info {
+    padding-left: 15px;
+    display: block;
+    width: 200px;
+    font-size: 10px;
+    color: white;
+    text-shadow: none;
+    padding-top: 4px;
+    paddint-left: 15px;
+}
+#result-page .b-result-summary div {
+    color: white;
+    font-size: 11px;
+    text-shadow: none;
+    float: left;
+    height: 20px;
+}
