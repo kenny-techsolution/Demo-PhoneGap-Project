@@ -131,6 +131,10 @@ define([
             });
         },
         collapseSearch: function(){
+            if(e){
+                e.preventDefault();
+                e.stopPropagation();
+            }
             var that = this;
             this.$(".b-inner-screen").animate({opacity: 0, "z-index":0},100);
             this.searchControlModule.hideLocationFilter(function(){
@@ -172,7 +176,8 @@ define([
             }
         },
         //Below are all button or link handlers.
-        backHandler: function(){
+        backHandler: function(e){
+            e.preventDefault();
             this.pubsub.publish("historyStack:back");
         },
         homeButtonHandler: function(e){

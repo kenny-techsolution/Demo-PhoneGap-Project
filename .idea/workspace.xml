@@ -2,43 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01594cb6-c36b-4b91-85c3-9e3abfdb759e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/dish.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/location.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/locationHistory.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/menu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/menuCategory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/menuRow.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/models/dish.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/models/location.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/models/menu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/models/menuCategory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/restaurant.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/restaurantPage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/restaurantPage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/restaurantResultList.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/restaurantRow.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/resultList.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search/autocompleteView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search/locationHistoryCollectionView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search/locationHistoryItemView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search/locationHistoryView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search/searchCompositeView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search/searchControlView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/search/searchControllerModel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/searchContainer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/searchForm.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/searchResults.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/templates/searchContainerTemplate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/views/locationHistory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/views/restaurantListItem.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/views/restaurantPage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/views/resultList.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/views/searchForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/archive/views/searchResults.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/phoneNavigation.css" afterPath="$PROJECT_DIR$/css/phoneNavigation.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/navigations/phoneNavigationController.js" afterPath="$PROJECT_DIR$/js/navigations/phoneNavigationController.js" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,16 +28,25 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="6" selection-start="36" selection-end="36" vertical-scroll-proportion="-1.875">
+            <state line="15" column="7" selection-start="675" selection-end="675" vertical-scroll-proportion="-8.75">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="restaurantContainer.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/containers/restaurantContainer.js">
+      <file leaf-file-name="phoneNavigation.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/phoneNavigation.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="58" selection-start="3354" selection-end="3354" vertical-scroll-proportion="0.0">
+            <state line="321" column="21" selection-start="6946" selection-end="6946" vertical-scroll-proportion="0.48711342">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="phoneNavigationController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/navigations/phoneNavigationController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="129" column="22" selection-start="5725" selection-end="5725" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="9" selection-start="461" selection-end="461" vertical-scroll-proportion="0.5504587">
+            <state line="8" column="13" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -165,8 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/mocks/mockSetup.js" />
-        <option value="$PROJECT_DIR$/js/models/dishModel.js" />
         <option value="$PROJECT_DIR$/js/models/menuModel.js" />
         <option value="$PROJECT_DIR$/js/models/restaurantDetailModel.js" />
         <option value="$PROJECT_DIR$/js/models/restaurantModel.js" />
@@ -174,20 +148,22 @@
         <option value="$PROJECT_DIR$/js/collections/restaurantDetailCollection.js" />
         <option value="$PROJECT_DIR$/js/collections/resultPaginatedCollection.js" />
         <option value="$PROJECT_DIR$/js/routers/phoneRouter.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/containers/restaurantContainer.js" />
         <option value="$PROJECT_DIR$/js/containers/searchResultContainer.js" />
         <option value="$PROJECT_DIR$/js/models/locationHistoryModel.js" />
         <option value="$PROJECT_DIR$/js/modules/searchControlModule.js" />
         <option value="$PROJECT_DIR$/js/templates/restaurantInfoTemplate.html" />
         <option value="$PROJECT_DIR$/js/libs/pep/jquery.pep.min.js" />
+        <option value="$PROJECT_DIR$/js/navigations/phoneNavigationController.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/phoneNavigation.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="14" />
+    <option name="x" value="78" />
     <option name="y" value="22" />
-    <option name="width" value="1276" />
+    <option name="width" value="1243" />
     <option name="height" value="778" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -335,7 +311,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="navigations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -506,15 +482,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="14" y="22" width="1276" height="778" extended-state="0" />
-    <editor active="false" />
+    <frame x="78" y="22" width="1243" height="778" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34361234" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26872247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26872247" sideWeight="0.98826486" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22682928" sideWeight="0.53881276" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28292683" sideWeight="0.7312775" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2907268" sideWeight="0.7312775" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22682928" sideWeight="0.5449011" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -584,13 +560,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/collections/dishCollection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="37" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/collections/locationHistoryCollection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="96" vertical-scroll-proportion="0.0">
@@ -622,13 +591,6 @@
     <entry file="file://$PROJECT_DIR$/js/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="27" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="36" selection-end="36" vertical-scroll-proportion="-1.875">
           <folding />
         </state>
       </provider>
@@ -668,13 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/templates/restaurantInfoTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="16" selection-start="451" selection-end="451" vertical-scroll-proportion="-5.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/libs/pep/jquery.pep.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="93" column="29" selection-start="5381" selection-end="5381" vertical-scroll-proportion="0.0">
@@ -686,7 +641,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="9" selection-start="461" selection-end="461" vertical-scroll-proportion="0.5504587">
+        <state line="8" column="13" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/templates/restaurantInfoTemplate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="16" selection-start="451" selection-end="451" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/navigations/phoneNavigationController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="22" selection-start="5725" selection-end="5725" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="7" selection-start="675" selection-end="675" vertical-scroll-proportion="-8.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/phoneNavigation.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="321" column="21" selection-start="6946" selection-end="6946" vertical-scroll-proportion="0.48711342">
           <folding />
         </state>
       </provider>

@@ -318,10 +318,10 @@ a {    text-decoration: none }
 /*coming soon*/
 .coming-soon {
     display: block;
-    font-size: 25px;
+    font-size: 20px;
     position: absolute;
     top: 140px;
-    width: 300px;
+    width: 240px;
     left: 40px;
     line-height: 30px;
 }
